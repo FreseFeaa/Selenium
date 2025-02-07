@@ -67,16 +67,3 @@ try:
 finally:
     browser.quit()
 
-
-
-
-# print(browser.find_element(By.ID, "text"))
-# print(browser.find_element(By.CSS_SELECTOR, "#text"))
-# browser.find_element(By.CSS_SELECTOR, "[data-product_id='7746']")
-# print(browser.find_element(By.XPATH, "//input"))
-# print(browser.find_element(By.NAME, "text"))
-# print(browser.find_element(By.TAG_NAME, "input"))
-# print(browser.find_element(By.CLASS_NAME, "search3__input"))
-# print(browser.find_element(By.LINK_TEXT, "Войти"))
-# print(browser.find_element(By.PARTIAL_LINK_TEXT, "Во"))
-# browser.execute_script("document.title='AXAXAXA';alert(document.title)")
