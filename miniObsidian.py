@@ -30,3 +30,22 @@
 
 # Неявное ожидание
 # browser.implicitly_wait(5)
+
+#Работа с unittest
+# import unittest
+# class TestAbs(unittest.TestCase):
+#     def test_abs1(self):
+#         self.assertEqual(abs(-50),50,"Должно быть положительное") 
+        
+#     def test_abs2(self):
+#         self.assertEqual(abs(-50),-50,"Должно быть положительное") 
+# if __name__ == "__main__":
+#     unittest.main()
+#     print('Готово')
+
+#.venv в Vscode (Виртуальное окружение, для установки в него зависимостей)
+
+#Pytest ищет файлы test_*.py или *_test.py
+# Внутри этих файлов ищет:
+# Функции test*()  (Вне классов)
+# Методы test*()   (Внутри классов Test* и без метода __init__)
