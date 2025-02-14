@@ -44,8 +44,20 @@
 #     print('Готово')
 
 #.venv в Vscode (Виртуальное окружение, для установки в него зависимостей)
+#Справа снизу версия питона
+#Createe Vitrual Environment
+#Venv
+#Python Версия MicrosoftStore
+#Открыть не powershell, а cmd = Возможно надо будет перезагрузить VSC
+#freeze - (TODO изучить)
 
 #Pytest ищет файлы test_*.py или *_test.py
 # Внутри этих файлов ищет:
 # Функции test*()  (Вне классов)
 # Методы test*()   (Внутри классов Test* и без метода __init__)
+
+
+#pytest -s -v -m "smoke and win10" test_meow15.py
+# -s : C принтами
+# -v : Подробная информация
+# -m : Конкретный тест через marker 
