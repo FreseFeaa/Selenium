@@ -29,8 +29,16 @@ class TestMainPage():
         print("\n end test1")
 
     @pytest.mark.regression 
+    @pytest.mark.skip
     def test_guest2(self, browser):
         print("\n start test2")
         browser.get(url)
         browser.find_element(By.CSS_SELECTOR,".basket-mini .btn-group > a")
         print("\n end test2")
+
+    @pytest.mark.xfail(reason="Комментарий к заранее правильно заваленому тесту")
+    def test_guest3(self, browser):
+        print("\n start test3")
+        browser.get(url)
+        browser.find_element(By.CSS_SELECTOR,".basketKFC")
+        print("\n end test3")

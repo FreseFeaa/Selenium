@@ -3,8 +3,6 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 
 
-#Этот файл в разработке, я мало че понял, поэтому оно пока чт не работает
-
 url = "https://selenium1py.pythonanywhere.com/"
 
 class TestMainPage1():
@@ -15,7 +13,7 @@ class TestMainPage1():
         self.browser = webdriver.Chrome()
 
     @classmethod
-    def setup_class(self):
+    def teardown_class(self):
         print("\n Quit browser")
         self.browser.quit()
 
@@ -33,7 +31,7 @@ class TestMainPage2():
         print("\n Start browser")
         self.browser = webdriver.Chrome()
 
-    def setup_method(self):
+    def teardown_method(self):
         print("\n Quit browser")
         self.browser.quit()
 
