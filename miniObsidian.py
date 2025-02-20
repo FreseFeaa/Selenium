@@ -108,12 +108,6 @@
 
 
 # Фикстуры и декараторы pytest
-# @pytest.fixture(scope="class")        # Вначале класса и в конце после всех методов
-# def prepair_class():
-#     print("\n Начало класса")
-#     yield # Финализатор (Как return, но когда над ним все действия выполнятся - код после него будет выполнен)
-#     print("\n Конец класса")
-
 # @pytest.fixture                       # Только там где она явно указывается 
 # def prepair_import():
 #     print("На меня явно указали")
@@ -122,3 +116,16 @@
 # def prepair_smile():
 #     print("\n Начало каждого метода")
 
+
+# @pytest.fixture(scope="class")        # Вначале класса и в конце после всех методов
+# def prepair_class():
+#     print("\n Начало класса")
+#     yield # Финализатор (Как return, но когда над ним все действия выполнятся - код после него будет выполнен)
+#     print("\n Конец класса")
+
+#function 
+#class
+#module
+#session
+
+#pytest -s -v -m "smoke or regression" --browser_name=firefox test_abc.py 
