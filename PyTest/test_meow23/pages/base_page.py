@@ -54,6 +54,12 @@ class BasePage():
     
     def login_button_click(self):
         self.browser.find_element(*BasePageLocators.ACCOUNT_BUTTON).click()
+
+    def reg_button_click(self):
+        self.browser.find_element(*BasePageLocators.REG_BUTTON).click()
+
+    def catalog_search_direktor_cucumberF1(self):
+        self.browser.find_element(*BasePageLocators.CATALOG_SEARCH).send_keys(*BasePageLocators.DIRECTOR_CUCUMBER_F1) 
     # def open_basket(self):
     #     login = self.browser.find_element(*BasePageLocators.BUTTON_BASKET)
     #     login.click()
