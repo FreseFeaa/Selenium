@@ -1,10 +1,6 @@
 from .base_page import BasePage
-from .locators import BasePageLocators
+from .locators import MainPageLocators
 
 class MainPage(BasePage):
-    pass
-    # def go_to_link_page(self):
-    #     login = self.browser.find_element(*MainPageLocators.LOGIN_LINK)
-    #     login.click()
-    #     # return LoginPage(browser = self.browser,url = self.browser.current_url)
-
+    def reg_button_click(self):
+        self.browser.find_element(*MainPageLocators.REG_BUTTON).click()
