@@ -17,6 +17,7 @@ def test_guest_see_login_button(browser):
     page.should_be_login_button()
 
 @pytest.mark.all_test
+@pytest.mark.main_page
 @pytest.mark.login
 def test_guest_can_login_in_account(browser):
     url = ("https://ogorodnik.by/")
@@ -28,6 +29,7 @@ def test_guest_can_login_in_account(browser):
     login_page.login_in_account()
 
 @pytest.mark.all_test
+@pytest.mark.main_page
 @pytest.mark.register
 def test_guest_can_register_in_new_account(browser):
     url = ("https://ogorodnik.by/")
@@ -40,6 +42,7 @@ def test_guest_can_register_in_new_account(browser):
     login_page.reg_new_account()
 
 @pytest.mark.all_test
+@pytest.mark.main_page
 @pytest.mark.register
 def test_guest_not_can_register_in_old_account(browser):
     url = ("https://ogorodnik.by/")
@@ -52,6 +55,7 @@ def test_guest_not_can_register_in_old_account(browser):
     login_page.reg_old_account()
 
 @pytest.mark.all_test
+@pytest.mark.main_page
 @pytest.mark.basket
 def test_add_to_basket_direktor_cucumber_f1(browser):
     url = ("https://ogorodnik.by/")

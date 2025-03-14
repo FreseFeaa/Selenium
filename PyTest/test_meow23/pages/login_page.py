@@ -4,7 +4,6 @@ from .base_page import BasePage
 from .locators import LoginPageLocators
 from .locators import BasePageLocators
 from .locators import MainPageLocators
-import time
 
 class LoginPage(BasePage):
     def login_in_account(self):
@@ -20,7 +19,6 @@ class LoginPage(BasePage):
         self.browser.find_element(*LoginPageLocators.REG_NEW_USER_NAME).send_keys(random_string) 
         self.browser.find_element(*LoginPageLocators.REG_NEW_EMAIL).send_keys(random_string + "@gmail.com")  
         self.browser.find_element(*LoginPageLocators.REG_NEW_PASSWORD).send_keys(random_string)  
-        time.sleep(4)
         self.browser.find_element(*LoginPageLocators.REGISTER_BUTTON).click()  
         assert self.browser.find_element(*LoginPageLocators.ACCOUNT_TITTLE).text == "Личный кабинет" , "При регистрации нового аккаунт чёт пошло не так"
 
