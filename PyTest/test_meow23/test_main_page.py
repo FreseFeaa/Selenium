@@ -6,6 +6,7 @@ from selenium.common.exceptions import NoSuchElementException
 from .pages.base_page import BasePage
 from .pages.main_page import MainPage
 from .pages.login_page import LoginPage
+from .pages.product_page import ProductPage
 from .pages.basket_page import BasketPage
 
 @pytest.mark.all_test
@@ -61,8 +62,8 @@ def test_add_to_basket_direktor_cucumber_f1(browser):
     url = ("https://ogorodnik.by/")
     page = MainPage(browser, url)
     page.open()
-    page.catalog_search_direktor_cucumberF1()
+    page.catalog_search("Огурец Директор F1")
+    product_page = ProductPage(browser, browser.current_url)
+    product_page.add_to_basket()
     basket_page = BasketPage(browser, browser.current_url)
-    basket_page.add_to_basket_direktor()
-
-
+    basket_page.product_in_basket("Огурец Директор F1")
