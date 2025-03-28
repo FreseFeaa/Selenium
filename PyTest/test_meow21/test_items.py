@@ -9,5 +9,11 @@ def test_find_button_add_cart(browser):
     browser.get(url)
     buttontext = browser.find_element(By.CLASS_NAME,"btn.btn-lg.btn-primary.btn-add-to-basket")
     print(buttontext)
-    time.sleep(4)
+    print()
     assert buttontext.is_displayed(), "Нет кнопки("
+
+def test_failing_jira(browser,jira_client):
+    url = ("https://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207")
+    browser.get(url)
+    buttontext = browser.find_element(By.CLASS_NAME,"btn.btn-lg.btn-primary.btn-add-to-basket")
+    assert buttontext.text == "Точно не будет", "Тест ожидаемо упал"

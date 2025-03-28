@@ -25,4 +25,4 @@ jira_issue = jira.create_issue(
     "description": "ОЧень крутая задача для очень крутых сигм",
     "issuetype": {"id":"10009"}
     })
-jira.add_attachment(jira_issue.key,"komar.png")
+jira.add_attachment(jira_issue.key,"jira\komar.png")
