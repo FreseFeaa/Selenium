@@ -12,7 +12,7 @@ Critical - Критические ошибки
 logger = logging.getLogger("Selenium")
 logger.setLevel(logging.INFO)
 
-handler_file = logging.FileHandler("Selenium_log.log",mode = "a")
+handler_file = logging.FileHandler("TestLogging\Selenium.log",mode = "a")
 formater = logging.Formatter("%(asctime)s %(filename)s %(message)s")
 handler_console = logging.StreamHandler()
 

@@ -1,5 +1,4 @@
 import math
-from ..logger import logger
 from selenium.common.exceptions import NoSuchElementException
 from selenium.common.exceptions import NoAlertPresentException
 from selenium.common.exceptions import TimeoutException
@@ -14,12 +13,12 @@ class BasePage():
         self.browser = browser
         self.url = url
         self.browser.implicitly_wait(timeout)
-        self.logger = logger
+        # self.logger = logger
 
 
     def open(self):
         self.browser.get(self.url)
-        self.logger.info("Крутая инфа")
+        # self.logger.info(f"Открытие сайта {self.url}")
 
     
     def is_element_present(self,how,what):
